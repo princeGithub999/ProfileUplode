@@ -4,7 +4,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="20dp"
+   >
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical">
+     <com.google.android.material.imageview.ShapeableImageView
+         android:id="@+id/image"
+         android:scaleType="centerCrop"
+         android:layout_width="100dp"
+         android:layout_height="100dp"
+         app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full"
+         android:src="@drawable/img"/>
 
+     <androidx.appcompat.widget.AppCompatButton
+         android:id="@+id/selectImage_Button"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:hint="Select Image"
+         android:layout_marginTop="10dp"
+         tools:ignore="HardcodedText" />
 
+     <EditText
+         android:id="@+id/enterName_EditText"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         tools:ignore="Autofill,HardcodedText,TextFields"
+         android:hint="Enter_Name"/>
+
+     <EditText
+         android:id="@+id/enterEmail_EditText"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         tools:ignore="LabelFor"
+         android:hint="Enter_Email"/>
+
+     <androidx.appcompat.widget.AppCompatButton
+         android:id="@+id/submit"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:hint="Submit"/>
+ </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:orientation="horizontal">
+      <com.google.android.material.imageview.ShapeableImageView
+          android:id="@+id/getImage"
+          android:layout_width="100dp"
+          android:layout_height="100dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <TextView
+            android:id="@+id/getName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"/>
+        <TextView
+            android:id="@+id/getEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"/>
+    </LinearLayout>
+
+  </LinearLayout>
 </LinearLayout>
