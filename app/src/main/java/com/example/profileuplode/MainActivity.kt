@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity() {
             if (data != null) {
 
                 val ref = Firebase.storage.reference.child("photo5888.png")
-                ref.putFile(data!!.data!!).addOnSuccessListener {
+                ref.putFile(data.data!!).addOnSuccessListener {
 
                     val url = it.storage.downloadUrl
                     ref.downloadUrl.addOnSuccessListener { it ->
